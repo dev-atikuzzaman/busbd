@@ -1,0 +1,30 @@
+{
+  "name": "Jatri — Bus Ticket Booking",
+  "short_name": "Jatri",
+  "description": "Search routes, pick your seat, and book bus tickets across Bangladesh.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F6F8F7",
+  "theme_color": "#0F766E",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

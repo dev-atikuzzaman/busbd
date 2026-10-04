@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1,
+  h2,
+  h3 {
+    @apply font-display;
+  }
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-coral-500;
+  }
+}
+
+@layer components {
+  .input {
+    @apply w-full rounded-lg border border-ink-100 bg-ink-50 px-3 py-2.5 text-sm text-ink-900 focus:border-teal-500 focus:outline-none;
+  }
+}
+
+/* Ticket-stub cutout: two semicircle notches on the left/right edge of a
+   trip card, so it reads as a torn ticket rather than a generic rounded
+   card. The circle color must match whatever sits behind the card. */
+.ticket-notch::before,
+.ticket-notch::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 18px;
+  height: 18px;
+  background: var(--notch-bg, #f6f8f7);
+  border-radius: 9999px;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+.ticket-notch::before {
+  left: -9px;
+}
+.ticket-notch::after {
+  right: -9px;
+}
+
+.route-dash {
+  background-image: repeating-linear-gradient(
+    to right,
+    theme("colors.ink.400") 0,
+    theme("colors.ink.400") 4px,
+    transparent 4px,
+    transparent 9px
+  );
+  height: 1px;
+}
+
+/* Journey-line hero motif: a gently curved path between two points */
+.journey-path {
+  stroke-dasharray: 6 8;
+  stroke-linecap: round;
+}
